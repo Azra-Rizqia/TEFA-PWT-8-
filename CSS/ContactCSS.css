@@ -86,8 +86,8 @@ h1 {
   outline: none;
 }
 .textarea-field {
-  height: 100px;
-  padding-top: 10px;
+  height: 40px;
+  padding-top: 20px
 }
 .btn {
   border-radius: 20px;
@@ -98,7 +98,12 @@ h1 {
   border: none;
   cursor: pointer;
 }
-
+button:hover{
+    opacity:0.9;
+}
+.box p {
+  padding: 20px 0px;
+}
 .posisi{
   margin-left: auto;
   margin-right: auto;

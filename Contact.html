@@ -18,14 +18,37 @@
             </nav>
         </div>
         <div class="box">
+            <form id='nameForm'></form>
             <form>
                 <h1>Hubungi Saya</h1>
-                <input type="text" class="input-field" placeholder="Nama" />
-                <input type="email" class="input-field" placeholder="Email" />
-                <textarea type="text" class="input-field textarea-field" placeholder="Pesan"></textarea>
-                <button type="button" class="btn">Kirim</button>
+                <input type="text" class="input-field"  id="name" placeholder="Nama" required/>
+                <input type="email" class="input-field" id="email" placeholder="Email" required/>
+                <textarea type="text" class="input-field textarea-field" id="message" placeholder="Pesan" required></textarea>
+                <input type="button" class="btn" value="kirim" onclick="myfunc()">
+                
+                <br>
+                <p id="result"></p>
+                <br />
+                
             </form>
-          </div>
+        </div>
+        
+        <script>
+            function myfunc() {
+                var nama = document.getElementById("name").value ;
+                var email = document.getElementById("email").value ;
+                var pesan = document.getElementById("message").value ;
+    
+                if (nama !="" && email !="" && pesan!=""){
+                    document.getElementById("result").innerHTML = 'Halo' + '  ' + nama + '  ' + 'dengan akun' + '  ' + email + ',  ' + 'Pesan anda yaitu'+ ' "' + pesan + '" ' + 'sudah terkirim.'
+                    return True;
+                }else{
+                    alert('Dimohon isi form dengan lengkap!');
+                }
+                }
+        </script>
+            </form>
+        </div>
     </body>
     <footer>
         <div class="footer">
